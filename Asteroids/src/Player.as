@@ -24,11 +24,11 @@ package
 		private var leftKey:Boolean = false;
 		private var rightKey:Boolean = false;
 		
+		private var counter:int = 0;
 		
 		public function Player() 
 		{
 			placeholderArt = new PlaceHolderAsset();
-			
 			this.addChild(placeholderArt);
 			
 			addEventListener(Event.ADDED_TO_STAGE, init);
@@ -83,6 +83,7 @@ package
 		}
 		private function loop(e:Event):void
 		{
+			counter++;
 				if (upKey) 
 				{ 
 					velocity.y += acceleration * Math.sin(this.rotation / 180 * Math.PI);
@@ -122,6 +123,17 @@ package
 					velocity.x *= (maxSpeed / spd);
 					
 				}
+				
+				if (counter >= 60)
+				{
+					this.x += 10;
+					
+					if (counter == 80)
+					{
+						counter = 0;
+					}
+				}
+				
 		}
 		
 		

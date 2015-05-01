@@ -32,6 +32,9 @@ package
 			
 			playerBact.y = stage.stageWidth * 0.5;
 			playerBact.x = stage.stageHeight * 0.5;
+			
+			
+			
 		}
 		
 		
