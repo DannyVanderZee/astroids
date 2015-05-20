@@ -23,6 +23,10 @@ package
 		private var leftKey:Boolean = false;
 		private var rightKey:Boolean = false;
 		
+		private var fireKey:Boolean = false;
+		
+		private var bullets:Array = [];
+		
 		private var counter:int = 0;
 		
 		public function Player() 
@@ -60,6 +64,21 @@ package
 				{
 					downKey = true;
 				}
+				if (k.keyCode == 32) //space
+				{
+					var bullet:Bullet = new Bullet(placeholderArt.x, placeholderArt.y);
+					
+					bullet.rotation = rotation;
+					bullet.x = this.x;
+					bullet.y = this.y;
+					/*var ang:Number = 0;
+					this.r
+					var xSpeed:Number = Math.cos(ang) * 45;
+					var ySpeed:Number = Math.sin(ang) * 45;
+					var bullet:Bullet = new Bullet(placeholderArt.x, placeholderArt.y, xSpeed, ySpeed);*/
+					stage.addChild(bullet);
+					bullets.push(bullet);
+				}
 		}
 		private function kUp(k:KeyboardEvent):void
 		{
@@ -78,6 +97,10 @@ package
 				if (k.keyCode == 40) //down arrowkey
 				{
 					downKey = false;
+				}
+				if (k.keyCode == 32) //space
+				{
+					fireKey = false;
 				}
 		}
 		private function loop(e:Event):void
@@ -106,8 +129,10 @@ package
 				this.x += velocity.x;
 				this.y += velocity.y;
 				
-				
-				
+				for (var i:int = 0; i < bullets.length; i++)
+				{
+					bullets[i].Move();
+				}
 				
 				if (this.x < 0) this.x = stage.stageWidth;
 				if (this.x > stage.stageWidth) this.x = 0;
