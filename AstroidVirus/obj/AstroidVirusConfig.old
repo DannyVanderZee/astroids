@@ -36,15 +36,10 @@
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-<<<<<<< HEAD
       <path-element>C:\Users\raymonjz\Desktop\asteroids\astroids\AstroidVirus\lib\PlayerPlaceHolder.swc</path-element>
       <path-element>C:\Users\raymonjz\Desktop\asteroids\astroids\AstroidVirus\lib\AstroidsArt.swc</path-element>
-=======
-      <path-element>C:\xampp\htdocs\SCHOOL 2015\periode1\Projecten met meerderen vakken\astroids\AstroidVirus\lib\PlayerPlaceHolder.swc</path-element>
-      <path-element>C:\xampp\htdocs\SCHOOL 2015\periode1\Projecten met meerderen vakken\astroids\AstroidVirus\lib\AstroidsArt.swc</path-element>
-      <path-element>C:\xampp\htdocs\SCHOOL 2015\periode1\Projecten met meerderen vakken\astroids\AstroidVirus\lib\Background.swc</path-element>
-      <path-element>C:\xampp\htdocs\SCHOOL 2015\periode1\Projecten met meerderen vakken\astroids\AstroidVirus\lib\AstroidVirusArt.swc</path-element>
->>>>>>> origin/master
+      <path-element>C:\Users\raymonjz\Desktop\asteroids\astroids\AstroidVirus\lib\Background.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\asteroids\astroids\AstroidVirus\lib\AstroidVirusArt.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>

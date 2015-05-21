@@ -13,6 +13,7 @@ package
 		private var xSpeed:Number;
 		private var ySpeed:Number;
 		
+		
 		//private var velocity:Point = new Point();
 		private const acceleration:int = 20;
 		
@@ -24,6 +25,7 @@ package
 			this.xSpeed = xSpeed;
 			this.ySpeed = ySpeed;
 			
+			addEventListener(Event.ENTER_FRAME, loop);
 		}
 		
 		public function Move():void {
@@ -38,6 +40,14 @@ package
 			x += xSpeed;
 			y += ySpeed;
 		}*/
+		private function loop(e:Event):void
+		{
+				if (this.x < 0) this.x = stage.stageWidth;
+				if (this.x > stage.stageWidth) this.x = 0;
+				if (this.y < 0) this.y = stage.stageHeight;
+				if (this.y > stage.stageHeight) this.y = 0;
+			
+		}
 	}
 
 }
