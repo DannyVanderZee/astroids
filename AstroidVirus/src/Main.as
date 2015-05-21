@@ -2,6 +2,7 @@ package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.system.JPEGLoaderContext;
 	
 	/**
 	 * ...
@@ -10,6 +11,7 @@ package
 	public class Main extends Sprite 
 	{
 		private var playerBact:Player;
+		private var background:BackgroundArt = new BackgroundArt();
 		
 		public function Main() 
 		{
@@ -30,15 +32,14 @@ package
 			playerBact = new Player();
 			addChild(playerBact);
 			
+			addChildAt(background,0);
+			
 			playerBact.y = stage.stageWidth * 0.5;
 			playerBact.x = stage.stageHeight * 0.5;
 			
 			
 			
 		}
-		
-		
-		
 		
 	}
 	
