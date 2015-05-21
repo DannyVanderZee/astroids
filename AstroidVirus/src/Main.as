@@ -2,12 +2,9 @@ package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
-<<<<<<< HEAD
 	import flash.media.Sound;
 	import flash.net.URLRequest;
-=======
-	import flash.system.JPEGLoaderContext;
->>>>>>> origin/master
+
 	
 	/**
 	 * ...
@@ -17,7 +14,6 @@ package
 	{
 		private var playerBact:Player;
 		private var background:BackgroundArt = new BackgroundArt();
-		
 		[Embed(source="heartbeat441khz.mp3")]
 		private var HeartBeat:Class;
 		private var sound:Sound;
