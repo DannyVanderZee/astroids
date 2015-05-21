@@ -11,7 +11,7 @@ package
 	 */
 	public class Player extends MovieClip
 	{
-		private var placeholderArt:PlaceHolderAsset;
+		private var playerArt:PlayerArt;
 		private const maxSpeed:int = 20;
 		private const acceleration:int = 1;
 		private const rotation1:int = 10;
@@ -31,8 +31,8 @@ package
 		
 		public function Player() 
 		{
-			placeholderArt = new PlaceHolderAsset();
-			this.addChild(placeholderArt);
+			playerArt = new PlayerArt();
+			this.addChild(playerArt);
 			
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
@@ -66,7 +66,7 @@ package
 				}
 				if (k.keyCode == 32) //space
 				{
-					var bullet:Bullet = new Bullet(placeholderArt.x, placeholderArt.y);
+					var bullet:Bullet = new Bullet(playerArt.x, playerArt.y);
 					
 					bullet.rotation = rotation;
 					bullet.x = this.x;
