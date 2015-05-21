@@ -2,6 +2,8 @@ package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.media.Sound;
+	import flash.net.URLRequest;
 	
 	/**
 	 * ...
@@ -10,6 +12,13 @@ package
 	public class Main extends Sprite 
 	{
 		private var playerBact:Player;
+		
+		[Embed(source="heartbeat441khz.mp3")]
+		private var HeartBeat:Class;
+		private var sound:Sound;
+		
+		
+		
 		
 		public function Main() 
 		{
@@ -27,13 +36,15 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
+			
 			playerBact = new Player();
 			addChild(playerBact);
 			
 			playerBact.y = stage.stageWidth * 0.5;
 			playerBact.x = stage.stageHeight * 0.5;
 			
-			
+			sound = new HeartBeat;
+			sound.play();
 			
 		}
 		
