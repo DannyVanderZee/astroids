@@ -14,7 +14,7 @@ package
 	{
 		private var playerBact:Player;
 		private var background:BackgroundArt = new BackgroundArt();
-		[Embed(source="heartbeat441khz.mp3")]
+		[Embed(source = "../lib/heartbeat441khz.mp3")]
 		private var HeartBeat:Class;
 		private var sound:Sound;
 		

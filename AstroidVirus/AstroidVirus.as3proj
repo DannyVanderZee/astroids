@@ -72,7 +72,7 @@
   <!-- Assets to embed into the output SWF -->
   <library>
     <asset path="lib\_leveldesign__2.jpg" />
-    <asset path="src\heartbeat441khz.mp3" />
+    <asset path="lib\heartbeat441khz.mp3" />
   </library>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
