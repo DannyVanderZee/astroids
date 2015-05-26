@@ -22,7 +22,6 @@ package
 		private var downKey:Boolean = false;
 		private var leftKey:Boolean = false;
 		private var rightKey:Boolean = false;
-		
 		private var fireKey:Boolean = false;
 		
 		private var bullets:Array = [];
@@ -151,9 +150,20 @@ package
 			{
 				this.x += 10;
 				
+<<<<<<< HEAD
 				if (counter == 80)
 				{
 					counter = 0;
+=======
+				if (counter >= 20) //de hartslag beat
+				{
+					this.x += 6;
+					
+					if (counter == 28)
+					{
+						counter = 0;
+					}
+>>>>>>> 8724835b35ca17ee4896ef95e66d6db2c81201aa
 				}
 			}
 		}
