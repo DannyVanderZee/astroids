@@ -16,8 +16,10 @@ package
 	{
 		private var playerBact:Player;
 		private var background:BackgroundArt = new BackgroundArt();
+		
 		[Embed(source = "../lib/heartbeat441khz.mp3")]
-		private var HeartBeat:Class;
+		private var HeartBeat:Class; //sound of the heartbeat
+		
 		private var sound:Sound;
 		private var menu : Menu;
 		
@@ -40,7 +42,7 @@ package
 			
 			addEventListener(Event.ENTER_FRAME, update);
 			
-			redEnemys = [];
+			redEnemys = []; //onnodige array wat je ook bij de variable declaration kan plaatsen?
 		}
 		
 		private function StartGame(e:Event):void 
@@ -53,25 +55,26 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			removeChild(menu);
 			
-			var makeRedEnemyTimer:Timer = new Timer(1000, 0);
 			
+			var makeRedEnemyTimer:Timer = new Timer(1000, 0); //RedBloodcell spawning randomizer. 
 			makeRedEnemyTimer.addEventListener(TimerEvent.TIMER, makeRedEnemyTimerListener);
-			
 			function makeRedEnemyTimerListener (e:TimerEvent):void
 			{
 				newRedEnemy();
 			}
-			makeRedEnemyTimer.start();
+			makeRedEnemyTimer.start(); //random timer for above ^
+			
+			
 			
 			playerBact = new Player();
-			addChild(playerBact);
+			addChild(playerBact);	//player
 			
-			addChildAt(background,0);
+			addChildAt(background,0); //background
 			
-			playerBact.y = stage.stageWidth * 0.5;
+			playerBact.y = stage.stageWidth * 0.5; //player size
 			playerBact.x = stage.stageHeight * 0.5;
 			
-			sound = new HeartBeat;
+			sound = new HeartBeat; //music
 			sound.play();
 			
 		}
@@ -82,7 +85,7 @@ package
 			
 			for (var k : int = j - 1; k >= 0 ; k--)
 			{
-				redEnemys[k].update();
+				redEnemys[k].update(); //calling update from redEnemy script? 
 			}
 		}
 		
@@ -90,6 +93,7 @@ package
 		{
 			var newRedEnemy: RedEnemy = new RedEnemy();
 			addChild(newRedEnemy);
+			
 			newRedEnemy.y = Math.random() * stage.stageWidth;
 			redEnemys.push(newRedEnemy);
 		}

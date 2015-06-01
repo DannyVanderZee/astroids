@@ -2,11 +2,12 @@ package
 {
  import flash.display.Sprite;
  import flash.events.Event;
+ import Main;
  /**
   * ...
   * @author Swan Chase
   */
-	public class Bullet extends Sprite
+	public class Bullet extends MainObject
 	{
 		private var playerBulletArt:PlayerBulletArt = new PlayerBulletArt() ;
 		private var deathTimer:Number = 0;
@@ -30,15 +31,25 @@ package
 		//move in the direction the ship is facing
 		this.y += acceleration * Math.sin(radians);
 		this.x += acceleration * Math.cos(radians);
+		
 		deathTimer++;
-		if (deathTimer == 40)
+		if (deathTimer == 40) // makes sure they dont exist forever.
 		{
-		removeChild(playerBulletArt);
+			removeChild(playerBulletArt);
 		}
-	}
-		private function loop(e:Event):void
+		
+		
+		/*if (this.hitTestObject(Main.redEnemys[k]))
 		{
-			if (this.x < 0) this.x = stage.stageWidth;
+				trace("ik word echt geraakt : O ");
+			
+		}*/
+		
+		
+	}
+		private function loop(e:Event):void 
+		{
+			if (this.x < 0) this.x = stage.stageWidth; //screen moving. Can become OOP. in the mainobject
 			if (this.x > stage.stageWidth) this.x = 0;
 			if (this.y < 0) this.y = stage.stageHeight;
 			if (this.y > stage.stageHeight) this.y = 0;
