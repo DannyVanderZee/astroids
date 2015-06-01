@@ -19,6 +19,7 @@ package
 		[Embed(source = "../lib/heartbeat441khz.mp3")]
 		private var HeartBeat:Class;
 		private var sound:Sound;
+		private var menu : Menu;
 		
 		private var redEnemys:Array;
 		
@@ -31,15 +32,26 @@ package
 		
 		private function init(e:Event = null):void 
 		{
-			Start();
+			menu = new Menu();
+			addChild(menu);
+			
+			menu.addEventListener(Menu.START, StartGame);
+			
+			
 			addEventListener(Event.ENTER_FRAME, update);
 			
 			redEnemys = [];
 		}
 		
+		private function StartGame(e:Event):void 
+		{
+			Start();
+		}
+		
 		public function Start():void
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
+			removeChild(menu);
 			
 			var makeRedEnemyTimer:Timer = new Timer(1000, 0);
 			
