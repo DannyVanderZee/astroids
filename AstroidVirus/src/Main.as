@@ -23,7 +23,8 @@ package
 		private var sound:Sound;
 		private var menu : Menu;
 		
-		private var redEnemys:Array;
+		public var redEnemys:Array = [];
+		public var bullets:Array = [];
 		
 		public function Main() 
 		{
@@ -42,7 +43,9 @@ package
 			
 			addEventListener(Event.ENTER_FRAME, update);
 			
-			redEnemys = []; //onnodige array wat je ook bij de variable declaration kan plaatsen?
+			
+			
+			//redEnemys = []; //onnodige array wat je ook bij de variable declaration kan plaatsen?
 		}
 		
 		private function StartGame(e:Event):void 
@@ -77,17 +80,66 @@ package
 			sound = new HeartBeat; //music
 			sound.play();
 			
+			playerBact.addEventListener("shooting", shooting);
+			
 		}
 		
 		private function update(e:Event):void 
 		{
 			var j : int	= redEnemys.length;
 			
+			for (var l:int = 0; l < bullets.length; l++) 
+			{
+				bullets[l].Move(); //calls for the move function in script: Bullet.as
+				
+			}
+			
 			for (var k : int = j - 1; k >= 0 ; k--)
 			{
 				redEnemys[k].update(); //calling update from redEnemy script? 
+			
+			
+			
+				for (var i:int = 0; i < bullets.length; i++)
+				{
+					
+					
+					if (redEnemys[k].hitTestPoint(bullets[i].x, bullets[i].y, true))
+					{
+						
+						trace("FUCK I GOT HIT!");
+						
+						removeChild(redEnemys[k]);
+						
+						//redEnemys.splice(redEnemys.indexOf(k), 1);
+						
+						//removeChild(bullets[i]);
+						
+						//bullets.splice(bullets.indexOf(i), i);
+					}
+				
+				}
+			  
 			}
+			
+			
+			
 		}
+		
+		public function shooting(e:Event):void
+		{
+			var bullet:Bullet = new Bullet(playerBact.x, playerBact.y);
+				
+			bullet.rotation = playerBact.rotation;
+			bullet.x = playerBact.x; 
+			bullet.y = playerBact.y;
+				
+			stage.addChild(bullet);
+			bullets.push(bullet);
+			
+			
+		}
+		
 		
 		private function newRedEnemy():void
 		{

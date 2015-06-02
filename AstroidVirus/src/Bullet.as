@@ -23,11 +23,16 @@ package
 		this.xSpeed = xSpeed;
 		this.ySpeed = ySpeed;
 		addEventListener(Event.ENTER_FRAME, loop);
+		
+		
+		
+		
+		
 	}
 
 	public function Move():void 
 	{
-		var radians:Number = this.rotation * Math.PI / 180;;
+		var radians:Number = this.rotation * Math.PI / 180;
 		//move in the direction the ship is facing
 		this.y += acceleration * Math.sin(radians);
 		this.x += acceleration * Math.cos(radians);
@@ -35,7 +40,7 @@ package
 		deathTimer++;
 		if (deathTimer == 40) // makes sure they dont exist forever.
 		{
-			removeChild(playerBulletArt);
+			//removeChild(playerBulletArt);
 		}
 		
 		

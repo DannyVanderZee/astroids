@@ -3,6 +3,7 @@ package
 	import flash.events.Event;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
+	import flash.events.EventDispatcher;
 	import flash.events.KeyboardEvent;
 	import flash.geom.Point;
 	/**
@@ -24,7 +25,8 @@ package
 		private var rightKey:Boolean = false;
 		private var fireKey:Boolean = false;
 		
-		public var bullets:Array = []; //public because of the collision.
+		//public var dispatcher = new EventDispatcher();
+		//public var bullets:Array = []; //public because of the collision.
 		
 		private var counter:int = 0;
 		
@@ -65,14 +67,16 @@ package
 			}
 			if (k.keyCode == 32) //space
 			{
-				var bullet:Bullet = new Bullet(playerArt.x, playerArt.y);
+				/*var bullet:Bullet = new Bullet(playerArt.x, playerArt.y);
 				
 				bullet.rotation = rotation;
 				bullet.x = this.x; 
 				bullet.y = this.y;
 				
 				stage.addChild(bullet);
-				bullets.push(bullet);
+				bullets.push(bullet);*/
+				
+				this.dispatchEvent( new Event("shooting"));
 			}
 		}
 		private function kUp(k:KeyboardEvent):void
@@ -124,10 +128,10 @@ package
 			this.x += velocity.x; 
 			this.y += velocity.y;
 			
-			for (var i:int = 0; i < bullets.length; i++)
+			/*for (var i:int = 0; i < bullets.length; i++)
 			{
 				bullets[i].Move(); //calls for the move function in script: Bullet.as
-			}
+			}*/
 			
 			if (this.x < 0) this.x = stage.stageWidth;
 			if (this.x > stage.stageWidth) this.x = 0;
