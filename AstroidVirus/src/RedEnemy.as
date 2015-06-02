@@ -2,7 +2,7 @@ package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
-	import MainObject;
+	//import MainObject;
 	/**
 	 * ...
 	 * @author Swan Chase
