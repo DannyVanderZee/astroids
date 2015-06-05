@@ -22,7 +22,7 @@ package
 		this.y = yPos;
 		this.xSpeed = xSpeed;
 		this.ySpeed = ySpeed;
-		addEventListener(Event.ENTER_FRAME, loop);
+		this.addEventListener(Event.ENTER_FRAME, loop);
 		
 		
 		
@@ -41,6 +41,8 @@ package
 		if (deathTimer == 40) // makes sure they dont exist forever.
 		{
 			//removeChild(playerBulletArt);
+			this.dispatchEvent(new Event ("removeBullet"));
+			trace("ik verstuur wat");
 		}
 		
 		
@@ -54,10 +56,14 @@ package
 	}
 		private function loop(e:Event):void 
 		{
+			//trace(this.x);
+			//trace(this.y);
+			/*
 			if (this.x < 0) this.x = stage.stageWidth; //screen moving. Can become OOP. in the mainobject
 			if (this.x > stage.stageWidth) this.x = 0;
 			if (this.y < 0) this.y = stage.stageHeight;
-			if (this.y > stage.stageHeight) this.y = 0;
+			if (this.y > stage.stageHeight) this.y = 0;*/
+			
 		}
 	}
 }

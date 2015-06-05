@@ -1,12 +1,13 @@
 package  
 {
+	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	/**
 	 * ...
 	 * @author Raymon Zoetigheid
 	 */
-	public class MainObject extends Sprite
+	public class MainObject extends MovieClip
 	{
 		//private var counter:int = 0;
 		public function MainObject() 
