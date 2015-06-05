@@ -7,7 +7,7 @@ package
 	import flash.media.Sound;
 	import flash.net.URLRequest;
 	import flash.utils.Timer;
-
+	
 	
 	/**
 	 * ...
@@ -29,6 +29,7 @@ package
 		public var redEnemys:Array = [];
 		public var bullets:Array = [];	
 		
+		public var scoreBoard:ScoreBoard;
 		
 		private var k_counters:int;
 		private var l_counters:int;
@@ -89,6 +90,9 @@ package
 			playerBact.y = stage.stageWidth * 0.5; //player size
 			playerBact.x = stage.stageHeight * 0.5;
 			
+			scoreBoard = new ScoreBoard();
+			addChild(scoreBoard);
+			
 			sound = new HeartBeat; //music
 			sound.play(0,9999);
 			
@@ -144,7 +148,7 @@ package
 		public function splicerinoRed():void
 		{
 			redEnemys.splice(redEnemys.indexOf(k_counters), 0);
-			
+			scoreBoard.updateScore(10);
 			
 		}
 		
