@@ -3,19 +3,20 @@ package
 	import flash.events.Event;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
+	import flash.events.EventDispatcher;
 	import flash.events.KeyboardEvent;
 	import flash.geom.Point;
 	/**
 	 * ...
 	 * @author Raymon Zoetigheid
 	 */
-	public class Player extends MovieClip
+	public class Player extends MainObject
 	{
 		private var playerArt:PlayerArt;
-		private const maxSpeed:int = 20;
+		private const maxSpeed:int = 15;
 		private const acceleration:int = 1;
 		private const rotation1:int = 10;
-		private const friction:Number = 0.85;
+		private const friction:Number = 0.88;
 		private var velocity:Point = new Point();
 		
 		private var upKey:Boolean = false;
@@ -24,7 +25,8 @@ package
 		private var rightKey:Boolean = false;
 		private var fireKey:Boolean = false;
 		
-		private var bullets:Array = [];
+		//public var dispatcher = new EventDispatcher();
+		//public var bullets:Array = []; //public because of the collision.
 		
 		private var counter:int = 0;
 		
@@ -65,18 +67,16 @@ package
 			}
 			if (k.keyCode == 32) //space
 			{
-				var bullet:Bullet = new Bullet(playerArt.x, playerArt.y);
+				/*var bullet:Bullet = new Bullet(playerArt.x, playerArt.y);
 				
 				bullet.rotation = rotation;
-				bullet.x = this.x;
+				bullet.x = this.x; 
 				bullet.y = this.y;
-				/*var ang:Number = 0;
-				this.r
-				var xSpeed:Number = Math.cos(ang) * 45;
-				var ySpeed:Number = Math.sin(ang) * 45;
-				var bullet:Bullet = new Bullet(placeholderArt.x, placeholderArt.y, xSpeed, ySpeed);*/
+				
 				stage.addChild(bullet);
-				bullets.push(bullet);
+				bullets.push(bullet);*/
+				
+				this.dispatchEvent( new Event("shooting"));
 			}
 		}
 		private function kUp(k:KeyboardEvent):void
@@ -125,13 +125,13 @@ package
 			if (rightKey) this.rotation += rotation1;
 			if (leftKey) this.rotation -= rotation1;
 			
-			this.x += velocity.x;
+			this.x += velocity.x; 
 			this.y += velocity.y;
 			
-			for (var i:int = 0; i < bullets.length; i++)
+			/*for (var i:int = 0; i < bullets.length; i++)
 			{
-				bullets[i].Move();
-			}
+				bullets[i].Move(); //calls for the move function in script: Bullet.as
+			}*/
 			
 			if (this.x < 0) this.x = stage.stageWidth;
 			if (this.x > stage.stageWidth) this.x = 0;
