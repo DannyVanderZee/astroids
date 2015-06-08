@@ -146,24 +146,24 @@ package
 				velocity.x *= (maxSpeed / spd);
 			}
 			
-			if (counter >= 60)
+			
+			if (counter < 50)
 			{
-				this.x += 10;
+				counter++;
 				
-				if (counter == 80)
+				if (counter >= 35)
+				{
+					this.x = this.x + 3;
+					
+				}
+				if (counter >= 49)
 				{
 					counter = 0;
-					if (counter >= 20) //de hartslag beat
-					{
-						this.x += 6;
-						
-						if (counter == 28)
-						{
-							counter = 0;
-						}
-					}
+					//trace("hartslag klaar");
 				}
+				
 			}
+			
 		}
 	}
 }

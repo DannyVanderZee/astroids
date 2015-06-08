@@ -8,7 +8,7 @@ package
   */
 	public class Bullet extends Sprite
 	{
-		private var playerBulletArt:PlayerBulletArt = new PlayerBulletArt() ;
+		private var playerBulletArt:kogel = new kogel() ;
 		private var deathTimer:Number = 0;
 		private var xSpeed:Number;
 		private var ySpeed:Number;
@@ -22,6 +22,9 @@ package
 		this.xSpeed = xSpeed;
 		this.ySpeed = ySpeed;
 		addEventListener(Event.ENTER_FRAME, loop);
+		
+		this.width = 25;
+		this.height = this.width;
 	}
 
 	public function Move():void 
@@ -38,10 +41,10 @@ package
 	}
 		private function loop(e:Event):void
 		{
-			if (this.x < 0) this.x = stage.stageWidth;
+			/*if (this.x < 0) this.x = stage.stageWidth;
 			if (this.x > stage.stageWidth) this.x = 0;
 			if (this.y < 0) this.y = stage.stageHeight;
-			if (this.y > stage.stageHeight) this.y = 0;
+			if (this.y > stage.stageHeight) this.y = 0;*/
 		}
 	}
 }
