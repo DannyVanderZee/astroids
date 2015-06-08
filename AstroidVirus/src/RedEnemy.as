@@ -8,12 +8,12 @@ package
 	public class RedEnemy extends Sprite
 	{
 		
-		private var asset:RedBloodCellArt;
+		private var _art:RedBloodCellArt;
 		
 		public function RedEnemy() 
 		{
-			asset = new RedBloodCellArt();
-			addChild (asset);
+			_art = new RedBloodCellArt();
+			addChild (_art);
 			//this.addEventListener(Event.ENTER_FRAME, update);
 		}
 		
