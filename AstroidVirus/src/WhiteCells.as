@@ -1,16 +1,26 @@
-package  
+package 
 {
+	import flash.display.MovieClip;
+	import flash.events.Event;
+	
 	/**
 	 * ...
-	 * @author Raymon Zoetigheid
+	 * @author Danny Van der Zee
 	 */
-	public class WhiteCells extends MainObject
+	public class WhiteCells extends MovieClip 
 	{
-		
-		public function WhiteCells() 
+		private var enemyArt:EnemyPArt;
+		public function WhiteCells()
 		{
+			enemyArt = new EnemyPArt();
+			this.addChild(enemyArt);
+			
 			
 		}
+		
+		
+		
+		
 		
 	}
 

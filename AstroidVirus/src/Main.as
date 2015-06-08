@@ -19,6 +19,7 @@ package
 		private var background:BackgroundArt = new BackgroundArt();
 		
 		private var bullet:Bullet;
+		private var spawner:EnemySpawner;
 		
 		[Embed(source = "../lib/heartbeat441khz.mp3")]
 		private var HeartBeat:Class; //sound of the heartbeat
@@ -83,6 +84,9 @@ package
 			
 			playerBact = new Player();
 			addChild(playerBact);	//player
+			
+			spawner = new EnemySpawner();
+			addChild(spawner);		//white cell
 			
 			
 			addChildAt(background,0); //background
