@@ -146,8 +146,8 @@ package
 				velocity.x *= (maxSpeed / spd);
 			}
 			
-			
-			if (counter < 50)
+			forcedMovement();
+			/*if (counter < 50)
 			{
 				counter++;
 				
@@ -162,7 +162,7 @@ package
 					//trace("hartslag klaar");
 				}
 				
-			}
+			}*/
 			
 		}
 	}

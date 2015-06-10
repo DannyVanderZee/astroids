@@ -21,8 +21,9 @@ package
 		
 		public function update():void 
 		{
-			x = x + 3;
-			//forcedMovement();
+			//x = x + 3;
+			forcedMovement();
 		}	
+		
 	}
 }

@@ -10,33 +10,32 @@ package
 	public class MainObject extends MovieClip
 	{
 		//private var counter:int = 0;
+		public var forcedCounter:int = 0;
 		public function MainObject() 
 		{
 			//ClassDiagram, moeten het wel OOP houden.
 			
 		}
 		
-		public function forcedMovement(e:Event):void
+		public function forcedMovement():void
 		{
-			var counter:int = 0;
-			counter++;
-			if (counter >= 60)
+			
+			forcedCounter++;
+			if (forcedCounter < 50)
 			{
-				this.x += 10;
+				forcedCounter++;
 				
-				if (counter == 80)
+				if (forcedCounter >= 35)
 				{
-					counter = 0;
-					if (counter >= 20) //de hartslag beat
-					{
-						this.x += 6;
-						
-						if (counter == 28)
-						{
-							counter = 0;
-						}
-					}
+					this.x = this.x + 3;
+					
 				}
+				if (forcedCounter >= 49)
+				{
+					forcedCounter = 0;
+					//trace("hartslag klaar");
+				}
+				
 			}
 			
 		}

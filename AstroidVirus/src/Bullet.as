@@ -1,12 +1,13 @@
 package  
 {
+ import flash.display.MovieClip;
  import flash.display.Sprite;
  import flash.events.Event;
  /**
   * ...
   * @author Swan Chase
   */
-	public class Bullet extends Sprite
+	public class Bullet extends MovieClip
 	{
 		private var playerBulletArt:kogelAnimatie = new kogelAnimatie() ;
 		private var deathTimer:Number = 0;
@@ -46,10 +47,11 @@ package
 	}
 		private function loop(e:Event):void
 		{
-			/*if (this.x < 0) this.x = stage.stageWidth;
+			
+			if (this.x < 0) this.x = stage.stageWidth;
 			if (this.x > stage.stageWidth) this.x = 0;
 			if (this.y < 0) this.y = stage.stageHeight;
-			if (this.y > stage.stageHeight) this.y = 0; */
+			if (this.y > stage.stageHeight) this.y = 0;
 		}
 		
 		public function destroy():void

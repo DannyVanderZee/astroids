@@ -146,11 +146,13 @@ package
 			
 			if (this.contains(bullet))
 			{
+				bullet.destroy();
 				removeChild(bullet);
 			}
 			bullets.splice(bullets.indexOf(bullet), 1);
 			
 			bullet.removeEventListener(Bullet.REMOVE_BULLET, handleBulletRemoval);
+			
 		
 		}
 		
