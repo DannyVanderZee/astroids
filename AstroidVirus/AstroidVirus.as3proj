@@ -58,6 +58,7 @@
     <element path="lib\AstroidVirusArt.swc" />
     <element path="lib\kogel animatie.swc" />
     <element path="lib\EnemyPlaceHolder.swc" />
+    <element path="lib\MenuOptionsMenuArt.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
