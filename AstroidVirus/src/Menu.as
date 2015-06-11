@@ -29,7 +29,8 @@ package
 			menuBackground.y = -400;
 			
 			menuStartButton = new MenuStartButtonArt();
-			menuStartButton.x =  400;
+			menuStartButton.x =  150;
+			menuStartButton.y = -100;
 			this.y = 400;
 			
 			menuStartButton.addEventListener(MouseEvent.CLICK, clicked);
