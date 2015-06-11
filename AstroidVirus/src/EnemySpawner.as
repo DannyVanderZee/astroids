@@ -12,17 +12,18 @@ package
 		private var enemySpawnTimer:Number;
 		private var enemySpawnTimerMax:Number;
 		private var numberOfWhiteCells:int;
-		public function EnemySpawner() 
+		private var _enemies:Array;
+		public function EnemySpawner(enemies:Array) 
 		{
+			_enemies = enemies;
 			init();
 		}
 		
 		private function init():void 
 		{
-			enemySpawnTimerMax = 30;
+			enemySpawnTimerMax = 900;
 			enemySpawnTimer = enemySpawnTimerMax;
-			addEventListener(Event.ENTER_FRAME, spawnEvents);
-			
+			addEventListener(Event.ENTER_FRAME, spawnEvents);			
 		}
 		
 		private function spawnEvents(e:Event):void 
@@ -61,6 +62,9 @@ package
 			whiteEnemy.x = xPos
 			whiteEnemy.y = yPos
 			addChild(whiteEnemy);
+			
+			_enemies.push(whiteEnemy);
+			
 		}
 		
 		private function spawnEnemyTop():void 

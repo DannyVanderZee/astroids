@@ -16,6 +16,7 @@ package
 	{
 		private var playerBact:Player;
 		private var background:BackgroundArt = new BackgroundArt();
+		private var whiteEnemy:WhiteCells;
 		
 		//private var bullet:Bullet;
 		private var spawner:EnemySpawner;
@@ -27,7 +28,9 @@ package
 		private var menu:Menu;
 		
 		public var redEnemys:Array = [];
+		public var whiteEnemys:Array = [];
 		public var bullets:Array = [];
+		
 		
 		public var scoreBoard:ScoreBoard;
 		
@@ -52,8 +55,21 @@ package
 			menu.addEventListener(Menu.START, StartGame);
 			
 			addEventListener(Event.ENTER_FRAME, update);
-		
+			
+			
 			//redEnemys = []; //onnodige array wat je ook bij de variable declaration kan plaatsen?
+		}
+		
+		private function updateTarget():void 
+		{
+			if (whiteEnemy != null)
+			{
+				for (var i:int = 0; i < whiteEnemys.length; i++)
+				{
+					whiteEnemy.setTarget( new Vector2D(playerBact.x, playerBact.y));
+					whiteEnemy.update();
+				}
+			}
 		}
 		
 		private function StartGame(e:Event):void
@@ -79,8 +95,10 @@ package
 			playerBact = new Player();
 			addChild(playerBact); //player
 			
-			spawner = new EnemySpawner();
+			spawner = new EnemySpawner(whiteEnemys);
 			addChild(spawner); //white cell
+			whiteEnemy = new WhiteCells();
+			addChild(whiteEnemy);
 			
 			addChildAt(background, 0); //background
 			
@@ -99,6 +117,8 @@ package
 		
 		private function update(e:Event):void
 		{
+			updateTarget();
+			
 			var j:int = redEnemys.length;
 			
 			for (var i:int = 0; i < bullets.length; i++)
@@ -125,7 +145,7 @@ package
 				}
 				
 			}
-		
+			
 		}
 		
 		public function splicerinoRed(redEnemy:RedEnemy):void

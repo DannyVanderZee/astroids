@@ -7,7 +7,7 @@ package
 	 * ...
 	 * @author Danny Van der Zee
 	 */
-	public class WhiteCells extends MovieClip 
+	public class WhiteCells extends Cell 
 	{
 		private var enemyArt:EnemyPArt;
 		public function WhiteCells()
@@ -15,12 +15,9 @@ package
 			enemyArt = new EnemyPArt();
 			this.addChild(enemyArt);
 			
-			
+			maxSpeed	=	10;
+			mass		=	50;
 		}
-		
-		
-		
-		
 		
 	}
 
