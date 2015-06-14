@@ -54,11 +54,14 @@
   <libraryPaths>
     <element path="lib\PlayerPlaceHolder.swc" />
     <element path="lib\AstroidsArt.swc" />
-    <element path="lib\Background.swc" />
-    <element path="lib\AstroidVirusArt.swc" />
     <element path="lib\kogel animatie.swc" />
     <element path="lib\EnemyPlaceHolder.swc" />
+    <element path="lib\WhiteCell.swc" />
+    <element path="lib\PlayerArt.swc" />
+    <element path="lib\RedCell.swc" />
     <element path="lib\MenuOptionsMenuArt.swc" />
+    <element path="lib\AstroidVirusArt.swc" />
+    <element path="lib\background2.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
@@ -76,6 +79,10 @@
   <library>
     <asset path="lib\_leveldesign__2.jpg" />
     <asset path="lib\heartbeat441khz.mp3" />
+    <asset path="lib\playerG1_v2.png" />
+    <asset path="lib\shoot.mp3" />
+    <asset path="lib\deathsound.mp3" />
+    <asset path="lib\Menu Music V1.mp3" />
   </library>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>

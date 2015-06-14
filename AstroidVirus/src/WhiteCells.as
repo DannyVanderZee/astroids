@@ -9,11 +9,14 @@ package
 	 */
 	public class WhiteCells extends Cell 
 	{
-		private var enemyArt:EnemyPArt;
+		private var enemyArt:WhiteBloodCell;
 		public function WhiteCells()
 		{
-			enemyArt = new EnemyPArt();
+			enemyArt = new WhiteBloodCell();
 			this.addChild(enemyArt);
+			
+			this.width = 80;
+			this.height = this.width;
 			
 			maxSpeed	=	10;
 			mass		=	50;

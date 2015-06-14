@@ -12,7 +12,7 @@ package
 	 */
 	public class Player extends MainObject
 	{
-		private var playerArt:PlayerArt;
+		private var _playerArt:Symbool1;
 		private const maxSpeed:int = 15;
 		private const acceleration:int = 1;
 		private const rotation1:int = 10;
@@ -32,8 +32,11 @@ package
 		
 		public function Player() 
 		{
-			playerArt = new PlayerArt();
-			this.addChild(playerArt);
+			_playerArt = new Symbool1();
+			this.addChild(_playerArt);
+			
+			this.width = 70;
+			this.height = this.width;
 			
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
@@ -101,6 +104,15 @@ package
 			{
 				fireKey = false;
 			}
+		}
+		
+		public function destroyPlayer():void
+		{
+			removeChild(_playerArt);
+			removeEventListener(Event.ENTER_FRAME, loop);
+			stage.removeEventListener(KeyboardEvent.KEY_DOWN, kDown);
+			stage.removeEventListener(KeyboardEvent.KEY_UP, kUp);
+			
 		}
 		private function loop(e:Event):void
 		{

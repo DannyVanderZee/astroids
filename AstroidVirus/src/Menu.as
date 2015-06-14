@@ -25,6 +25,8 @@ package
 		
 		public function init(e:Event = null):void 
 		{
+			
+			
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
 			menuBackground = new MenuBackgroundArt();

@@ -39,7 +39,7 @@ package
 		if (deathTimer == 40)
 		{
 			//removeChild(playerBulletArt);
-			trace("deathTimer afgelopen");
+			//trace("deathTimer afgelopen");
 			
 			this.dispatchEvent(new Event(REMOVE_BULLET));
 		}

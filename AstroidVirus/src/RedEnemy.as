@@ -10,19 +10,22 @@ package
 	public class RedEnemy extends MainObject
 	{
 		
-		private var _art:RedBloodCellArt;
+		private var _art:redCellArt;
 		
 		public function RedEnemy() 
 		{
-			_art = new RedBloodCellArt();
+			_art = new redCellArt();
 			addChild (_art);
 			//this.addEventListener(Event.ENTER_FRAME, update);
+			this.width = 75;
+			this.height = this.width;
 		}
 		
 		public function update():void 
 		{
-			x = x + 3;
+			x = x + 5;
 			//forcedMovement();
+			this.rotation += 4;
 		}	
 	}
 }
