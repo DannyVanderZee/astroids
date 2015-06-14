@@ -63,6 +63,7 @@
     <element path="lib\background2.swc" />
     <element path="lib\PlayerArt.swc" />
     <element path="lib\MenuBackground.swc" />
+    <element path="lib\optionsMenu.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

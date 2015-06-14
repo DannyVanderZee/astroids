@@ -13,7 +13,7 @@ package
 		private var menuBackground : background;
 		private var menuStartButton : MenuStartButtonArt;
 		private var menuOptionsButton : MenuOptionsButtonArt;
-		private var menuOptionsMenu : MenuOptionsMenuArt;
+		private var menuOptionsMenu : optionsMenu;
 		
 		public static const START : String = "gameStart";
 		
@@ -32,8 +32,10 @@ package
 			menuBackground = new background();
 			menuBackground.y = -400;
 			
-			menuOptionsMenu = new MenuOptionsMenuArt;
+			menuOptionsMenu = new optionsMenu;
 			menuOptionsMenu.y = -400;
+			menuOptionsMenu.width = 800;
+			menuOptionsMenu.height = 600;
 			
 			menuOptionsButton = new MenuOptionsButtonArt();
 			menuOptionsButton.x = 450;
