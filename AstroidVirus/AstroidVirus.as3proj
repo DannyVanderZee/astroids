@@ -62,6 +62,7 @@
     <element path="lib\AstroidVirusArt.swc" />
     <element path="lib\background2.swc" />
     <element path="lib\PlayerArt.swc" />
+    <element path="lib\MenuBackground.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

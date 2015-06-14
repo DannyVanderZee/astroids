@@ -12,7 +12,7 @@ package
 		//private var counter:int = 0;
 		public function MainObject() 
 		{
-			//ClassDiagram, moeten het wel OOP houden.
+			
 			
 		}
 		

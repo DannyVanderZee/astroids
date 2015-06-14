@@ -69,21 +69,21 @@ package
 		
 		private function spawnEnemyTop():void 
 		{
-			spawnEnemy(Math.random() * stage.stageWidth, -120	);
+			spawnEnemy(Math.random() * stage.stageWidth, -130);
 		}
 		private function spawnEnemyRight():void 
 		{
-			spawnEnemy(stage.stageWidth + 30, Math.random() * 600);
+			spawnEnemy(stage.stageWidth + 40, Math.random() * 610);
 		}
 		
 		private function spawnEnemyBottom():void 
 		{
-			spawnEnemy(Math.random() * stage.stageWidth, stage.stageHeight + 30);
+			spawnEnemy(Math.random() * stage.stageWidth, stage.stageHeight + 40);
 		}
 		
 		private function spawnEnemyLeft():void 
 		{
-			spawnEnemy( -120, Math.random() * stage.stageHeight - 30);
+			spawnEnemy( -130, Math.random() * stage.stageHeight - 40);
 		}
 		
 		

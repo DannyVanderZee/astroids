@@ -5,6 +5,7 @@ package
 	import flash.events.Event;
 	import flash.events.TimerEvent;
 	import flash.media.Sound;
+	import flash.media.SoundChannel;
 	import flash.net.URLRequest;
 	import flash.utils.Timer;
 	import flash.events.KeyboardEvent;
@@ -47,6 +48,7 @@ package
 		private var bulletTimer:int = 0;
 		public var scoreBoard:ScoreBoard;
 		
+		private var myChannel:SoundChannel = new SoundChannel();
 		//private var k_counters:int;
 		//private var l_counters:int;
 		
@@ -65,8 +67,7 @@ package
 			menu = new Menu();
 			addChild(menu);
 			
-			//sound = new menuSound; //music
-			//sound.play();
+			PlayMenuMusic();
 			
 			menu.addEventListener(Menu.START, StartGame);
 			
@@ -121,8 +122,18 @@ package
 			Start();
 		}
 		
+		public function PlayMenuMusic():void
+		{
+			sound = new menuSound; //music
+			myChannel = sound.play();
+			
+		}
+		
 		public function Start():void
 		{
+			
+			myChannel.stop();
+			
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			removeChild(menu);
 			
@@ -141,8 +152,13 @@ package
 			
 			spawner = new EnemySpawner(whiteEnemys);
 			addChild(spawner); //white cell
+			
 			whiteEnemy = new WhiteCells();
 			addChild(whiteEnemy);
+			
+			whiteEnemy.x = -100;
+			whiteEnemy.y = - 10;
+			
 			
 			addChildAt(background, 0); //background
 			

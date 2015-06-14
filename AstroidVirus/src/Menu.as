@@ -10,7 +10,7 @@ package
 	 */
 	public class Menu extends Sprite
 	{
-		private var menuBackground : MenuBackgroundArt;
+		private var menuBackground : background;
 		private var menuStartButton : MenuStartButtonArt;
 		private var menuOptionsButton : MenuOptionsButtonArt;
 		private var menuOptionsMenu : MenuOptionsMenuArt;
@@ -29,7 +29,7 @@ package
 			
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
-			menuBackground = new MenuBackgroundArt();
+			menuBackground = new background();
 			menuBackground.y = -400;
 			
 			menuOptionsMenu = new MenuOptionsMenuArt;

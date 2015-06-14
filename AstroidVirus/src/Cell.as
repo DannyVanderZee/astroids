@@ -1,16 +1,13 @@
 package  
 {
 	import flash.display.Sprite;
-	/**
-	 * ...
-	 * @author Berend Weij
-	 */
+	
 	public class Cell extends Sprite
 	{
 		
 		// onze belangrijkste Vectors: velocity (beweging) en positie
 		private var _velocity	:	Vector2D	=	new Vector2D(0, 0);
-		private var _position	:	Vector2D	=	new Vector2D(0, 0);
+		private var _position	:	Vector2D	=	new Vector2D(-100, -100);
 		
 		private var _maxSpeed		:	Number	=	1;
 		private var _mass			:	Number	=	1;
