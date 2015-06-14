@@ -57,11 +57,11 @@
     <element path="lib\kogel animatie.swc" />
     <element path="lib\EnemyPlaceHolder.swc" />
     <element path="lib\WhiteCell.swc" />
-    <element path="lib\PlayerArt.swc" />
     <element path="lib\RedCell.swc" />
     <element path="lib\MenuOptionsMenuArt.swc" />
     <element path="lib\AstroidVirusArt.swc" />
     <element path="lib\background2.swc" />
+    <element path="lib\PlayerArt.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

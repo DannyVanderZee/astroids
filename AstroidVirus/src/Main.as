@@ -82,7 +82,7 @@ package
 			//navigateToURL(request,"_level0");
 					if (e.keyCode == Keyboard.R)
 					{
-						StartGame(e);
+						//StartGame(e);
 						navigateToURL(new URLRequest(stage.loaderInfo.url), "_level0");
 					}
 				

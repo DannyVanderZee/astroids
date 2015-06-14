@@ -32,24 +32,24 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\src</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\PlayerPlaceHolder.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\AstroidsArt.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\kogel animatie.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\EnemyPlaceHolder.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\WhiteCell.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\PlayerArt.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\RedCell.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\MenuOptionsMenuArt.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\AstroidVirusArt.swc</path-element>
-      <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\lib\background2.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\PlayerPlaceHolder.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\AstroidsArt.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\kogel animatie.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\EnemyPlaceHolder.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\WhiteCell.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\RedCell.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\MenuOptionsMenuArt.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\AstroidVirusArt.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\background2.swc</path-element>
+      <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\lib\PlayerArt.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>C:\Users\raymonjz\Desktop\asteroids - kopie\astroids\AstroidVirus\src\Main.as</path-element>
+    <path-element>C:\Users\raymonjz\Desktop\astroids\AstroidVirus\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
